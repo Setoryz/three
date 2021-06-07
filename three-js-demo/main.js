@@ -67,6 +67,14 @@ const seyi = new THREE.Mesh(
 
 scene.add(seyi);
 
+const moonTexture = new THREE.TextureLoader().load("assets/moon.jpg");
+const moon = new THREE.Mesh(
+  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.MeshStandardMaterial({ map: moonTexture })
+);
+
+scene.add(moon);
+
 const animate = () => {
   requestAnimationFrame(animate);
 
