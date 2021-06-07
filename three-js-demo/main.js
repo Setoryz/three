@@ -59,6 +59,14 @@ const addStar = () => {
 const spaceTexture = new THREE.TextureLoader().load("assets/space.jpg");
 scene.background = spaceTexture;
 
+const seyiTexture = new THREE.TextureLoader().load("assets/seyi.jpg");
+const seyi = new THREE.Mesh(
+  new THREE.BoxGeometry(3, 3, 3),
+  new THREE.MeshBasicMaterial({ map: seyiTexture })
+);
+
+scene.add(seyi);
+
 const animate = () => {
   requestAnimationFrame(animate);
 
